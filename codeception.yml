@@ -13,6 +13,11 @@ extensions:
         - Codeception\Extension\Recorder
         - Codeception\Extension\Logger
         - Codeception\Extension\UbuntuNotifier
+    config:
+        Codeception\Extension\Recorder:
+            delete_successful: false
+
+
 coverage:
     enabled: true
     include:
