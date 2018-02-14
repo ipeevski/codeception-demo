@@ -392,12 +392,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Notifier.git",
-                "reference": "98cfc9e9481ee924938585fc95fb87f03621335c"
+                "reference": "71f77ca8409e2257f2862f454d7ea3d0ae160edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Notifier/zipball/98cfc9e9481ee924938585fc95fb87f03621335c",
-                "reference": "98cfc9e9481ee924938585fc95fb87f03621335c",
+                "url": "https://api.github.com/repos/Codeception/Notifier/zipball/71f77ca8409e2257f2862f454d7ea3d0ae160edc",
+                "reference": "71f77ca8409e2257f2862f454d7ea3d0ae160edc",
                 "shasum": ""
             },
             "require": {
@@ -432,7 +432,7 @@
                 "notification",
                 "unit testing"
             ],
-            "time": "2016-12-17T20:45:13+00:00"
+            "time": "2018-02-14T01:05:19+00:00"
         },
         {
             "name": "codeception/stub",
