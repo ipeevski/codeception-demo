@@ -143,3 +143,11 @@ Run with --coverage-html flag and then investigate `tests/_output/coverage/index
 ---
 
 # Questions?!
+
+- GitHub repository: https://github.com/ipeevski/codeception-demo
+
+- Email: ipeevski@gmail.com
+
+- LinkedIn: https://linkedin.com/in/ipeevski
+
+- Company: [Personify Care](https://www.personifycare.com/) - We are hiring!
