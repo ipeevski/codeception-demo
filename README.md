@@ -61,10 +61,22 @@ Configuration
 ---
 Configuration is managed through configuration files in [tests/acceptance.suite.yml](/tests/acceptance.suite.yml)
 
+Run Interactively
+---
+It's very useful to be able to try selectors interactively. This can be achieved by running Codeception in interactive mode
+```shell
+codecept console acceptance
+```
+
+After that you can run commands and see their results in the opened browser, for example
+$I->amOnUrl('http://demo')
+$I->fillField('#username', 'demo')
+
+
 Next Steps
 ===
 - Parallel runs (via robo-paracept)
-- Split tests to modules
+- Split tests to groups
 - Setup separate environments
 - Setup database data population
 
