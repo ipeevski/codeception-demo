@@ -1,0 +1,19 @@
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+settings:
+    memory_limit: 1024M
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+        - Codeception\Extension\Recorder
+        - Codeception\Extension\Logger
+        - Codeception\Extension\UbuntuNotifier
+coverage:
+    enabled: true
+    include:
+        - dashboard.php

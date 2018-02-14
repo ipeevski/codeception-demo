@@ -1,0 +1,13 @@
+Test Case - Login:
+    ☐ Enter username
+    ☐ Enter password
+    ☐ Click "Login"
+        ☐ System logs you in appropriately
+        ☐ Login name is displayed in the top navigation
+        ☐ Dashboard view is loaded
+
+Test Case - Load a patient:
+    ☐ Login (as per Login test case)
+    ☐ Select a user and click on the user's row
+        ☐ The selected user is loaded
+        ☐ The name and all other details match those from the selected row

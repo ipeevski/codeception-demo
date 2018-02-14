@@ -1,0 +1,23 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: http://demo/
+            browser: chrome
+            wait: 3 # Try to find element up to 3 seconds before failing
+            window_size: 1024x768
+            capabilities:
+                javascriptEnabled: true
+                chromeOptions:
+                    args: ["--disable=infobars=true"]
+        - \Helper\Acceptance
+        - VisualCeption:
+            maximumDeviation: 0 # deviation in percent
+            saveCurrentImageIfFailure: true
+            report: true
