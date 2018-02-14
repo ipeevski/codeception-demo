@@ -8,6 +8,7 @@ java -jar \
     -servlet org.openqa.grid.web.servlet.LifecycleServlet \
     -registerCycle 0 \
     -port 4444 > tests/_output/selenium.log 2>&1 &
+sleep 2
 
 # Start tests
 codecept run acceptance --steps --html --coverage-html
