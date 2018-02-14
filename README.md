@@ -83,6 +83,7 @@ Run with --coverage-html flag and then investigate `tests/_output/coverage/index
 
 Next Steps
 ===
+- Learn more about the capabilities of [WebDriver](https://codeception.com/docs/modules/WebDriver)
 - Parallel runs (via robo-paracept)
 - Split tests to groups
 - Setup separate environments
