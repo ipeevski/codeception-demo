@@ -103,7 +103,7 @@ $I->loadSessionSnapshot();
 
 ---
 
-# Run Interactively
+## Run Interactively
 
 It's very useful to be able to try selectors interactively. This can be achieved by running Codeception in interactive mode
 ```shell
@@ -115,6 +115,12 @@ After that you can run commands and see their results in the opened browser, for
 $I->amOnUrl('http://demo')
 $I->fillField('#username', 'demo')
 ...
+```
+
+## Run through browser in docker
+```shell
+curl -sS "http://localhost:4444/extra/LifecycleServlet?action=shutdown"
+docker run -d --rm -p 4444:4444 -v /dev/shm:/dev/shm --add-host="demo:172.17.0.1" --name selenium-chrome selenium/standalone-chrome
 ```
 
 ---
@@ -136,9 +142,11 @@ Run with --coverage-html flag and then investigate `tests/_output/coverage/index
 
 - Learn more about the capabilities of [WebDriver](https://codeception.com/docs/modules/WebDriver)
 - Parallel runs (via robo-paracept)
+- Extract common steps to helpers
 - Split tests to groups
 - Setup separate environments
 - Setup database data population
+- Write PHPUnit and Integration tests
 
 ---
 
