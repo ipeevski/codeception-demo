@@ -40,6 +40,7 @@ class MainCest
      */
     public function _failed(AcceptanceTester $I)
     {
+        // When fail, wait to hit enter
         $I->pauseExecution();
     }
 
@@ -54,6 +55,7 @@ class MainCest
         $I->makeScreenshot('login_' . time());
 
         $this->wait();
+        // Fill in username
         $I->click(Map::FIELD_USERNAME);
         $I->pressKey(Map::FIELD_USERNAME, 'B');
         $this->wait();
@@ -64,11 +66,14 @@ class MainCest
         $I->appendField(Map::FIELD_USERNAME, 'man');
 
         $this->wait();
+        // Fill in password
         $I->fillField(Map::FIELD_PASSWORD, 'passwd');
         $this->wait();
+        // Click on button to sign in
         $I->click('Sign in');
         $this->wait();
 
+        // Check we are on the dashboard page
         $I->seeInCurrentUrl(Map::URL_DASHBOARD);
         $I->see('Dashboard', Map::AREA_DASHBOARD);
 
@@ -87,14 +92,17 @@ class MainCest
         $I->amOnPage(Map::URL_DASHBOARD);
         $this->wait();
 
+        // Make screenshot
         $I->makeScreenshot('dashboard_' . time());
 
         $I->wantTo('See user details');
+        // Click on a row from the table
         $I->click(Map::LINK_USER);
         $this->wait();
 
         $I->waitForElementVisible(Map::AREA_USER, 2);
 
+        // Check we are on the users page
         $I->see('User Information', Map::AREA_USER);
 
         // Store the user url for the next step
@@ -112,10 +120,14 @@ class MainCest
         // Load the page
         $I->amOnPage($this->userUrl);
 
+        // Make a screenshot
         $I->makeScreenshot('user_' . time());
 
         $I->wantTo('Go back home');
+        // Click on the Home button
         $I->click('Home');
+
+        // Check we are back on the dashboard page
         $I->seeInCurrentUrl(Map::URL_DASHBOARD);
 
         // Compare visually
