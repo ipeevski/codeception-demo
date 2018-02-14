@@ -72,6 +72,14 @@ After that you can run commands and see their results in the opened browser, for
 $I->amOnUrl('http://demo')
 $I->fillField('#username', 'demo')
 
+Test Results
+---
+Test results will be shown on the console.
+If you run codeception with the --html flag, they'll also be available as an HTML report: `tests/_output/report.html`
+
+Code Coverage
+---
+Run with --coverage-html flag and then investigate `tests/_output/coverage/index.html` file
 
 Next Steps
 ===
