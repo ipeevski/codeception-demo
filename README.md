@@ -11,6 +11,8 @@ Demonstrate how to start working with codeception
 5. Investigating test results
 6. Next steps
 
+Ask questions at any time
+
 ---
 
 # Topics
@@ -43,7 +45,7 @@ composer require --dev codeception/codeception codeception/c3 codeception/visual
 ```shell
 vendor/bin/codecept bootstrap
 ```
-* Install selenium
+* Install Selenium / ChromeDriver / GeckoDriver for Firefox / Marionette for Firefox
 ```shell
 wget -O tests/selenium.jar https://goo.gl/hvDPsK
 ```
