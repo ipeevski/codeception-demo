@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Stop Selenium
+curl -sS "http://localhost:4444/extra/LifecycleServlet?action=shutdown"
+
+# Run through docker
+docker stop selenium-chrome
+sleep 2
+docker run -d --rm -p 4444:4444 -v /dev/shm:/dev/shm --add-host="demo:172.17.0.1" --name selenium-chrome selenium/standalone-chrome
+sleep 2
+
+# Start tests
+codecept run acceptance --steps --html --coverage-html

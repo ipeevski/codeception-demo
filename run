@@ -2,7 +2,8 @@
 
 # Start Selenium
 curl -sS "http://localhost:4444/extra/LifecycleServlet?action=shutdown"
-sleep 1
+docker stop selenium-chrome
+sleep 2
 java -jar \
     tests/selenium.jar \
     -role node \
@@ -10,11 +11,8 @@ java -jar \
     -servlet org.openqa.grid.web.servlet.LifecycleServlet \
     -registerCycle 0 \
     -port 4444 > tests/_output/selenium.log 2>&1 &
-sleep 2
 
-# Run through docker
-#docker stop selenium-chrome
-#docker run -d --rm -p 4444:4444 -v /dev/shm:/dev/shm --add-host="demo:172.17.0.1" --name selenium-chrome selenium/standalone-chrome
+sleep 2
 
 # Start tests
 codecept run acceptance --steps --html --coverage-html
