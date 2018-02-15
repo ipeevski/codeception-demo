@@ -6,7 +6,7 @@ class MainCest
     private $userUrl;
 
     private $tester;
-    private $slow = false;
+    private $interactive = false;
 
     /**
      * Common instructions to run before all tests
@@ -138,7 +138,7 @@ class MainCest
 
     private function wait($time = 1)
     {
-        if ($this->slow) {
+        if ($this->interactive) {
             $this->tester->wait($time);
         }
     }
