@@ -1,0 +1,4 @@
+actor: Patient
+modules:
+    enabled:
+        - \Helper\Registration
